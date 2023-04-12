@@ -9,6 +9,7 @@ Este projeto está em desenvolvimento, ele foi criado com o intuito de praticar 
 No decorrer do desenvolvimento, irei atualizando este documento, com toda e qualquer informação relevante sobre o projeto.
 
 Este desafio foi retirado do [Frontend Mentor](https://www.frontendmentor.io).
+Link do projeto no ar [https://d3vnicolas.github.io/rock-paper-scissors/](Pedra, Papel, Tesoura)
 
 ## Sobre o desafio
 
