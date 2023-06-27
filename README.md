@@ -20,7 +20,7 @@ Seus usuários devem ser capazes de:
 
 - Ver o layout ideal do jogo, dependendo do tamanho da tela do dispositivo
 - Jogar Pedra, Papel e Tesoura contra o computador
-- Manter o placar após atualizar o navegador _(optional)_
+- Manter o placar após atualizar o navegador _(opcional)_
 - **Bônus:** Jogue Pedra, Papel, Tesoura, Lagarto, Spock contra o computador _(opcional)_
 
 ## Regras
