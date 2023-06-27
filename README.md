@@ -16,14 +16,12 @@ Link do projeto no ar [Pedra, Papel, Tesoura](https://d3vnicolas.github.io/rock-
 
 O desafio é construir este jogo de Pedra, Papel e Tesoura e deixá-lo o mais próximo possível do design.
 
-Você pode usar qualquer ferramenta que desejar para ajudá-lo a concluir o desafio. Portanto, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.
-
-Seus usuários devem ser capazes de:
+Meus usuários devem ser capazes de:
 
 - Ver o layout ideal do jogo, dependendo do tamanho da tela do dispositivo
 - Jogar Pedra, Papel e Tesoura contra o computador
-- Manter o placar após atualizar o navegador _(optional)_
-- **Bônus:** Jogue Pedra, Papel, Tesoura, Lagarto, Spock contra o computador _(opcional)_
+- Manter o placar após atualizar o navegador
+- **Bônus:** Jogue Pedra, Papel, Tesoura, Lagarto, Spock contra o computador
 
 ## Regras
 
