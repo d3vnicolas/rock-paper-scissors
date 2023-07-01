@@ -14,8 +14,7 @@ const contentModal = document.createElement("img")
 contentModal.setAttribute("src", "./public/images/image-rules.svg")
 contentModal.setAttribute("alt", "Regras")
 const elementBody = document.querySelector("body");
-const modalRules = new Modal("Regras", contentModal)
-
+const modalRules = new Modal("Regras", "./public/images/icon-close.svg", contentModal)
 
 const scoreView = new ScoreBoardView(score)
 const buttonsView = new ButtonsPlayView([buttonRock, buttonPaper, buttonScissor])
