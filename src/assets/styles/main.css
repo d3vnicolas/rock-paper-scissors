@@ -4,122 +4,109 @@
   font-weight: 100;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-ExtraLightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-SemiBoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-ExtraBoldItalic.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
-
 @font-face {
   font-family: "barlow";
   src: url("../font/BarlowSemiCondensed-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 html,
 body {
-  background: radial-gradient(#1f3756, #141539);
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   font-family: barlow;
   font-weight: normal;
   height: 100vh;
@@ -127,19 +114,61 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.2rem;
   text-align: center;
 }
 
 .attribution {
   color: #ffffff;
 }
-
 .attribution a {
   color: #5b83cd;
 }
-
 .attribution a:hover {
   color: #3967bc;
 }
-/*# sourceMappingURL=main.css.map */
+
+.modal__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.modal__content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  padding: 3rem;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+.modal__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+.modal__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+.modal__title {
+  color: hsl(229, 25%, 31%);
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .modal__content {
+    max-width: 362px;
+    width: 90vw;
+  }
+}/*# sourceMappingURL=main.css.map */
