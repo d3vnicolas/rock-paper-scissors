@@ -1,12 +1,12 @@
 export class Button {
     content
     action
-    selector
+    selectors
 
-    constructor(content, action, selector) {
+    constructor(content, action, selectors) {
         this.content = content
         this.action = action
-        this.selector = selector
+        this.selectors = selectors
     }
 
     /**
@@ -40,14 +40,14 @@ export class Button {
     /**
      * @returns {Array} Array of selector classes css
      */
-    get selector() {
-        return this.selector
+    get selectors() {
+        return this.selectors
     }
 
     /**
-     * @param {Array} newSelector array with css classes of button
+     * @param {Array} newSelectors array with css classes of button
      */
-    set selector(newSelector) {
-        this.selector = newSelector
+    set selectors(newSelectors) {
+        this.selectors = newSelectors
     }
 }
