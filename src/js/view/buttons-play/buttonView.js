@@ -1,10 +1,10 @@
-export class ButtonsPlayView {
+export class ButtonView {
     buttons
     parentElement
 
-    constructor(buttons) {
+    constructor(buttons, parentElement) {
         this.buttons = buttons
-        this.parentElement = document.querySelector("[data-attr=buttons-list]")
+        this.parentElement = parentElement
     }
 
     render() {
@@ -18,7 +18,7 @@ export class ButtonsPlayView {
         const newButton = document.createElement("button")
         newButton.appendChild(args.content)
         newButton.addEventListener("click", () => args.action())
-        args.selector.forEach((selector) => {
+        args.selectors.forEach((selector) => {
             newButton.classList.add(selector)
         })
 

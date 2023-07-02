@@ -166,6 +166,30 @@ body {
   font-weight: 700;
 }
 
+.button__rules {
+  background-color: unset;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.8rem 2.6rem;
+  transition: all 200ms ease;
+}
+.button__rules:hover {
+  transform: scale(1.1);
+}
+.button__rules--content {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.button__rules--wrapper {
+  bottom: 3.2rem;
+  position: fixed;
+  right: 3.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media (max-width: 640px) {
   .modal__content {
     max-width: 362px;

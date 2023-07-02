@@ -3,6 +3,11 @@ export class ModalView {
     modal
     parentElement
 
+    /**
+     * 
+     * @param {Object} modal
+     * @param {Node} parent 
+     */
     constructor(modal, parent) {
         this.elementModal = document.createElement("div")
         this.modal = modal
@@ -44,6 +49,7 @@ export class ModalView {
     }
 
     close() {
+        this.elementModal.innerHTML = ""
         this.elementModal.remove()
     }
 
