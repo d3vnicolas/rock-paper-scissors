@@ -1,29 +1,27 @@
 export class ButtonsPlayView {
     buttons
-    element
+    parentElement
 
     constructor(buttons) {
         this.buttons = buttons
-        this.element = document.querySelector("[data-attr=buttons-list]")
+        this.parentElement = document.querySelector("[data-attr=buttons-list]")
     }
 
     render() {
-        this.element.innerHTML = ""
+        this.parentElement.innerHTML = ""
         this.buttons.forEach((button) => {
-            this.element.appendChild(this.renderButton(button))
+            this.parentElement.appendChild(this.renderButton(button))
         })
     }
 
     renderButton(args) {
-        const buttonElement = document.createElement("div")
-        buttonElement.classList.add("buttons__button")
-        
-        buttonElement.innerHTML = `
-            <img src="${args.icon}"/>
-        `
-        buttonElement.style.backgroundColor = args.color
-        buttonElement.setAttribute("value", args.value)
+        const newButton = document.createElement("button")
+        newButton.appendChild(args.content)
+        newButton.addEventListener("click", () => args.action())
+        args.selector.forEach((selector) => {
+            newButton.classList.add(selector)
+        })
 
-        return buttonElement
+        return newButton
     }
 }

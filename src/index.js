@@ -1,25 +1,35 @@
-import { ButtonPlay } from "./js/model/button-play/buttonPlay.js"
+import { Button } from "./js/model/button/button.js"
 import { ScoreBoard } from "./js/model/score-board/scoreBoard.js"
 import { Modal } from "./js/model/modal/modal.js"
 import { ButtonsPlayView } from "./js/view/buttons-play/buttonsPlayView.js"
 import { ScoreBoardView } from "./js/view/score-board/scoreBoardView.js"
 import { ModalView } from "./js/view/modal/modalView.js"
 
+//Instance score board
 const score = new ScoreBoard("Pedra Papel Tesoura")
-const buttonRock = new ButtonPlay("pedra", "blue", "./public/images/icon-rock.svg") 
-const buttonPaper = new ButtonPlay("papel", "red", "./public/images/icon-paper.svg") 
-const buttonScissor= new ButtonPlay("tesoura", "yellow", "./public/images/icon-scissors.svg") 
 
+// Button rock
+let contentRock = document.createElement("img")
+contentRock.setAttribute("src", "./public/images/icon-rock.svg")
+const buttonRock = new Button(contentRock, function(){void(0)}, ["button__rock", "button__play"])
+
+// Button paper
+let contentPaper = document.createElement("img")
+contentPaper.setAttribute("src", "./public/images/icon-paper.svg")
+const buttonPaper = new Button(contentPaper, function(){void(0)}, ["button__paper", "button__play"])
+
+// Button scissors
+let contentScissors = document.createElement("img")
+contentScissors.setAttribute("src", "./public/images/icon-scissors.svg")
+const buttonScissors = new Button(contentScissors, function(){void(0)}, ["button__scissors", "button__play"])
+
+// Modal rules
 const contentModal = document.createElement("img")
 contentModal.setAttribute("src", "./public/images/image-rules.svg")
 contentModal.setAttribute("alt", "Regras")
-const elementBody = document.querySelector("body");
-const modalRules = new Modal("Regras", "./public/images/icon-close.svg", contentModal)
 
 const scoreView = new ScoreBoardView(score)
-const buttonsView = new ButtonsPlayView([buttonRock, buttonPaper, buttonScissor])
-const modalView = new ModalView(modalRules, elementBody)
+const buttonsView = new ButtonsPlayView([buttonRock, buttonPaper, buttonScissors])
 
 scoreView.render()
 buttonsView.render()
-modalView.render()
