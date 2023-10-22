@@ -6,7 +6,7 @@ import { ScoreBoardView } from "./js/view/score-board/scoreBoardView.js"
 import { ModalView } from "./js/view/modal/modalView.js"
 
 //Instance score board
-const score = new ScoreBoard("Pedra Papel Tesoura")
+const score = new ScoreBoard("Pedra<br/> Papel<br/> Tesoura")
 
 // Button rock
 let contentRock = document.createElement("img")
