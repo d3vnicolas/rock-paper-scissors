@@ -1,40 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Rock paper scissor game" />
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./src/assets/styles/main.css" />
 
     <title>Frontend Mentor | Pedra, Papel, Tesoura</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <div class="attribution">
-      Desafio retirado do
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >.
-      <br />
-      Desenvolvido por
-      <a href="http://github.com/d3vnicolas">Nicolas Soares</a>.
-    </div>
+    <header>
+      <div class="score-board" data-attr="score-board"></div>
+    </header>
+    <main>
+      <ul class="buttons__list" data-attr="buttons-list"></ul>
+    </main>
+    <footer>
+      <div class="attribution">
+        Desafio retirado do
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+        <br />
+        Desenvolvido por
+        <a href="http://github.com/d3vnicolas" target="_blank">Nicolas Soares</a>.
+      </div>
+      <div class="button__rules--wrapper"></div>
+    </footer>
   </body>
+<script type="module" src="./src/index.js"></script>
 </html>
