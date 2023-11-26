@@ -114,7 +114,9 @@ body {
 }
 
 body {
+  display: inline-block;
   padding: 0 16px;
+  position: relative;
 }
 body footer {
   bottom: 32px;
@@ -254,7 +256,7 @@ header {
 }
 
 main {
-  margin-top: 72px;
+  margin: 80px 0;
 }
 
 .buttons__list {
@@ -324,10 +326,22 @@ main {
   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
+@media (min-width: 640px) {
+  .buttons__list::before {
+    content: "";
+    background: url("/public/images/bg-triangle.svg") center center no-repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+}
 @media (max-width: 640px) {
   .modal__content {
     max-width: 362px;
     width: calc(100vw - 32px);
+  }
+  .buttons__list {
+    flex-direction: column;
   }
 }
 @media (max-width: 480px) {
@@ -345,5 +359,17 @@ main {
   .score-board__title br {
     display: none;
     white-space: break-spaces;
+  }
+  footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+  footer .button__rules--wrapper {
+    position: static;
+  }
+  main {
+    margin-bottom: 148px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,9 +1,31 @@
+//
+//  Desktop +640px
+//  ___________________________________
+@media (min-width: $screen__s)
+    .buttons
+        &__list::before
+            content: ""
+            background: url("/public/images/bg-triangle.svg") center center no-repeat
+            height: 100%
+            position: absolute
+            width: 100%
+
+//
+//  Mobile -640px
+//  ___________________________________
 @media (max-width: $screen__s)
     .modal
         &__content
             max-width: 362px
             width: calc(100vw - 32px)
-
+    
+    .buttons
+        &__list
+            flex-direction: column
+            
+//
+//  Mobile -480px
+//  ___________________________________
 @media (max-width: $screen__sm)
     .score-board
         align-items: center
@@ -19,5 +41,17 @@
         &__title br
             display: none
             white-space: break-spaces
+    
+    footer
+        align-items: center
+        display: flex
+        flex-direction: column-reverse
+        gap: $padding-limit
+
+        .button__rules--wrapper
+            position: static
+
+    main
+        margin-bottom: 148px
 
             
