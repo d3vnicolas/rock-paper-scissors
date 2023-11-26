@@ -4,19 +4,20 @@ import { Modal } from "./js/model/modal/modal.js"
 import { ButtonView } from "./js/view/buttons-play/buttonView.js"
 import { ScoreBoardView } from "./js/view/score-board/scoreBoardView.js"
 import { ModalView } from "./js/view/modal/modalView.js"
+import { NPC } from "./js/model/npc.js"
 
 //Instance score board
 const score = new ScoreBoard("Pedra<br/> Papel<br/> Tesoura")
+const npc = new NPC
 
 // Button rock
 let contentRock = document.createElement("img")
 contentRock.setAttribute("src", "./public/images/icon-rock.svg")
 const buttonRock = new Button(
     contentRock,
-    function () {
-        void 0
-    },
-    ["button__rock", "button__play"]
+    e => npc.start(e.currentTarget),
+    ["button__rock", "button__play"],
+    "rock"
 )
 
 // Button paper
@@ -24,10 +25,9 @@ let contentPaper = document.createElement("img")
 contentPaper.setAttribute("src", "./public/images/icon-paper.svg")
 const buttonPaper = new Button(
     contentPaper,
-    function () {
-        void 0
-    },
-    ["button__paper", "button__play"]
+    e => npc.start(e.currentTarget),
+    ["button__paper", "button__play"],
+    "paper"
 )
 
 // Button scissors
@@ -35,10 +35,9 @@ let contentScissors = document.createElement("img")
 contentScissors.setAttribute("src", "./public/images/icon-scissors.svg")
 const buttonScissors = new Button(
     contentScissors,
-    function () {
-        void 0
-    },
-    ["button__scissors", "button__play"]
+    e => npc.start(e.currentTarget),
+    ["button__scissors", "button__play"],
+    "scissors"
 )
 
 // Content modal rules
