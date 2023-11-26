@@ -109,12 +109,17 @@ body {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   font-family: barlow;
   font-weight: normal;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
 body {
   padding: 0 16px;
+}
+body footer {
+  bottom: 32px;
+  position: absolute;
+  width: calc(100% - 32px);
 }
 
 .attribution {
@@ -139,6 +144,7 @@ body {
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
 .modal__content {
   background-color: #ffffff;
@@ -245,6 +251,77 @@ header {
   color: #4c4e52;
   font-size: 5rem;
   font-weight: bold;
+}
+
+main {
+  margin-top: 72px;
+}
+
+.buttons__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 52px 88px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 584px;
+}
+
+.button__play {
+  aspect-ratio: 1/1;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  width: 236px;
+}
+.button__rock .button__border, .button__paper .button__border, .button__scissors .button__border {
+  border-radius: 50%;
+  box-shadow: inset 0px -10px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 100%;
+}
+.button__rock .button__content, .button__paper .button__content, .button__scissors .button__content {
+  aspect-ratio: 1/1;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: calc(100% - 46px);
+}
+.button__rock .button__content img, .button__paper .button__content img, .button__scissors .button__content img {
+  max-width: 80px;
+  width: 100%;
+}
+.button__rock {
+  order: 3;
+}
+.button__rock .button__border {
+  background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+.button__paper {
+  order: 1;
+}
+.button__paper .button__border {
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.button__scissors {
+  order: 2;
+}
+.button__scissors .button__border {
+  background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
 @media (max-width: 640px) {

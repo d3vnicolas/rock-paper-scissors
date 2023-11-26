@@ -16,8 +16,20 @@ export class ButtonView {
 
     renderButton(args) {
         const newButton = document.createElement("button")
-        newButton.appendChild(args.content)
-        newButton.addEventListener("click", () => args.action())
+        newButton.setAttribute("value", args.value)
+
+        let elementBorder = document.createElement("div")
+        elementBorder.classList.add("button__border")
+
+        let elementWrapper = document.createElement("div")
+        elementWrapper.classList.add("button__content")
+
+        elementWrapper.appendChild(args.content)
+
+        newButton.append(elementBorder)
+        newButton.append(elementWrapper)
+
+        newButton.addEventListener("click", (e) => args.action(e))
         args.selectors.forEach((selector) => {
             newButton.classList.add(selector)
         })
