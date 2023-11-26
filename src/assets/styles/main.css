@@ -329,7 +329,7 @@ main {
 @media (min-width: 640px) {
   .buttons__list::before {
     content: "";
-    background: url("/public/images/bg-triangle.svg") center center no-repeat;
+    background: url("../../../public/images/bg-triangle.svg") center center no-repeat;
     height: 100%;
     position: absolute;
     width: 100%;
