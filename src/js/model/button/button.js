@@ -2,11 +2,13 @@ export class Button {
     content
     action
     selectors
+    value
 
-    constructor(content, action, selectors) {
+    constructor(content, action, selectors, value) {
         this.content = content
         this.action = action
         this.selectors = selectors
+        this.value = value
     }
 
     /**
@@ -49,5 +51,19 @@ export class Button {
      */
     set selectors(newSelectors) {
         this.selectors = newSelectors
+    }
+
+    /**
+     * @returns {String} String value
+     */
+    get value() {
+        return this.value
+    }
+
+    /**
+     * @param {String} newValue string with value
+     */
+    set value(newValue) {
+        this.value = newValue
     }
 }
