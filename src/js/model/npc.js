@@ -1,8 +1,16 @@
 export class NPC {
   possibilities
+  scoreBoard
+  scoreBoardView
 
-  constructor () {
-    this.possibilities = ['rock', 'paper', 'scissors'];
+  /**
+   * Constructor class
+   * @param {Object} scoreBoard 
+   */
+  constructor (scoreBoard, scoreBoardView) {
+    this.possibilities = ['rock', 'paper', 'scissors']
+    this.scoreBoard = scoreBoard
+    this.scoreBoardView = scoreBoardView
   }
 
   start(buttonPlay) {
@@ -23,10 +31,14 @@ export class NPC {
   }
 
   win() {
+    this.scoreBoard.scoreUp()
+    this.scoreBoardView.render()
     alert("Ganhou.")
   }
 
   lose() {
+    this.scoreBoard.scoreDown()
+    this.scoreBoardView.render()
     alert("Perdeu.")
   }
 
