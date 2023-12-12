@@ -8,7 +8,8 @@ import { NPC } from "./js/model/npc.js"
 
 //Instance score board
 const score = new ScoreBoard("Pedra<br/> Papel<br/> Tesoura")
-const npc = new NPC
+const scoreView = new ScoreBoardView(score)
+const npc = new NPC(score, scoreView);
 
 // Button rock
 let contentRock = document.createElement("img")
@@ -59,7 +60,6 @@ const buttonRules = new Button(
     ["button__rules"]
 )
 
-const scoreView = new ScoreBoardView(score)
 const buttonsPlayView = new ButtonView([buttonRock, buttonPaper, buttonScissors], document.querySelector("[data-attr=buttons-list]"))
 const buttonRulesView = new ButtonView([buttonRules], document.querySelector("footer .button__rules--wrapper"))
 
